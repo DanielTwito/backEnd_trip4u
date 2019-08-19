@@ -7,7 +7,7 @@ var fields = { field: ["Historic","Museums","Restaurants","Shopping"]};
 fs = require('fs');
 
 app.use(cors());
-var port = 3000;
+var port = 3001;
 app.listen(port, function () {
     console.log('Server  listening on port :  ' + port);
 });
