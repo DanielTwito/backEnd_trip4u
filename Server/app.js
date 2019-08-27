@@ -7,10 +7,12 @@ var fields = { field: ["Historic","Museums","Restaurants","Shopping"]};
 fs = require('fs');
 
 app.use(cors());
-var port = 3001;
-app.listen(port, function () {
-    console.log('Server  listening on port :  ' + port);
-});
+
+let port = process.env.PORT;
+if (port == null || port === "") {
+    port = 3001;
+}
+app.listen(port);
 
 
 var bodyParser = require('body-parser');
